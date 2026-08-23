@@ -1,3 +1,10 @@
+body {
+  background-color: #fff;
+  background-image:
+    linear-gradient(#e3f0fa 1px, transparent 1px),
+    linear-gradient(90deg, #e3f0fa 1px, transparent 1px);
+  background-size: 22px 22px;
+}
 main {
   max-width: 720px;
   margin: 0 auto;
