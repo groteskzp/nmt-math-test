@@ -1,0 +1,652 @@
+[
+  {
+    "id": "lin-001",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 5x − 12 = 23",
+    "options": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "answer": "7",
+    "solution": "5x = 35, отже x = 7"
+  },
+  {
+    "id": "lin-002",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 3x + 7 = 22",
+    "options": [
+      "6",
+      "7",
+      "4",
+      "5"
+    ],
+    "answer": "5",
+    "solution": "3x = 15, отже x = 5"
+  },
+  {
+    "id": "lin-003",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 4x + 9 = 29",
+    "options": [
+      "7",
+      "5",
+      "6",
+      "4"
+    ],
+    "answer": "5",
+    "solution": "4x = 20, отже x = 5"
+  },
+  {
+    "id": "lin-004",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 7x − 5 = 30",
+    "options": [
+      "6",
+      "7",
+      "4",
+      "5"
+    ],
+    "answer": "5",
+    "solution": "7x = 35, отже x = 5"
+  },
+  {
+    "id": "lin-005",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 2x + 18 = 34",
+    "options": [
+      "8",
+      "10",
+      "9",
+      "7"
+    ],
+    "answer": "8",
+    "solution": "2x = 16, отже x = 8"
+  },
+  {
+    "id": "lin-006",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 6x + 11 = 47",
+    "options": [
+      "8",
+      "7",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "solution": "6x = 36, отже x = 6"
+  },
+  {
+    "id": "lin-007",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 8x − 14 = 34",
+    "options": [
+      "8",
+      "6",
+      "7",
+      "5"
+    ],
+    "answer": "6",
+    "solution": "8x = 48, отже x = 6"
+  },
+  {
+    "id": "lin-008",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 9x + 6 = 60",
+    "options": [
+      "7",
+      "8",
+      "5",
+      "6"
+    ],
+    "answer": "6",
+    "solution": "9x = 54, отже x = 6"
+  },
+  {
+    "id": "lin-009",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 3x − 21 = 0",
+    "options": [
+      "7",
+      "9",
+      "8",
+      "6"
+    ],
+    "answer": "7",
+    "solution": "3x = 21, отже x = 7"
+  },
+  {
+    "id": "lin-010",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 5x + 15 = 65",
+    "options": [
+      "11",
+      "12",
+      "9",
+      "10"
+    ],
+    "answer": "10",
+    "solution": "5x = 50, отже x = 10"
+  },
+  {
+    "id": "lin-011",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 4x − 7 = 17",
+    "options": [
+      "8",
+      "6",
+      "7",
+      "5"
+    ],
+    "answer": "6",
+    "solution": "4x = 24, отже x = 6"
+  },
+  {
+    "id": "lin-012",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 12x + 8 = 56",
+    "options": [
+      "5",
+      "3",
+      "6",
+      "4"
+    ],
+    "answer": "4",
+    "solution": "12x = 48, отже x = 4"
+  },
+  {
+    "id": "lin-013",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 7x + 14 = 63",
+    "options": [
+      "7",
+      "6",
+      "8",
+      "9"
+    ],
+    "answer": "7",
+    "solution": "7x = 49, отже x = 7"
+  },
+  {
+    "id": "lin-014",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 6x − 30 = 12",
+    "options": [
+      "6",
+      "9",
+      "7",
+      "8"
+    ],
+    "answer": "7",
+    "solution": "6x = 42, отже x = 7"
+  },
+  {
+    "id": "lin-015",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 11x + 3 = 47",
+    "options": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "answer": "4",
+    "solution": "11x = 44, отже x = 4"
+  },
+  {
+    "id": "lin-016",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 2x − 9 = 15",
+    "options": [
+      "14",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": "12",
+    "solution": "2x = 24, отже x = 12"
+  },
+  {
+    "id": "lin-017",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 15x + 10 = 70",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": "4",
+    "solution": "15x = 60, отже x = 4"
+  },
+  {
+    "id": "lin-018",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 8x + 24 = 72",
+    "options": [
+      "8",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": "6",
+    "solution": "8x = 48, отже x = 6"
+  },
+  {
+    "id": "lin-019",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 10x − 35 = 15",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "7"
+    ],
+    "answer": "5",
+    "solution": "10x = 50, отже x = 5"
+  },
+  {
+    "id": "lin-020",
+    "topic": "linear-equations",
+    "text": "Розв'яжіть рівняння 13x + 5 = 44",
+    "options": [
+      "2",
+      "5",
+      "3",
+      "4"
+    ],
+    "answer": "3",
+    "solution": "13x = 39, отже x = 3"
+  },
+  {
+    "id": "perc-001",
+    "topic": "percents",
+    "text": "Знайдіть 15% від 240",
+    "options": [
+      "43",
+      "36",
+      "31",
+      "50"
+    ],
+    "answer": "36",
+    "solution": "240 · 0,15 = 36"
+  },
+  {
+    "id": "perc-002",
+    "topic": "percents",
+    "text": "Знайдіть 20% від 350",
+    "options": [
+      "98",
+      "59",
+      "70",
+      "84"
+    ],
+    "answer": "70",
+    "solution": "350 · 0,20 = 70"
+  },
+  {
+    "id": "perc-003",
+    "topic": "percents",
+    "text": "Знайдіть 25% від 160",
+    "options": [
+      "40",
+      "48",
+      "34",
+      "56"
+    ],
+    "answer": "40",
+    "solution": "160 · 0,25 = 40"
+  },
+  {
+    "id": "perc-004",
+    "topic": "percents",
+    "text": "Знайдіть 10% від 780",
+    "options": [
+      "78",
+      "66",
+      "109",
+      "94"
+    ],
+    "answer": "78",
+    "solution": "780 · 0,10 = 78"
+  },
+  {
+    "id": "perc-005",
+    "topic": "percents",
+    "text": "Знайдіть 30% від 90",
+    "options": [
+      "27",
+      "32",
+      "23",
+      "38"
+    ],
+    "answer": "27",
+    "solution": "90 · 0,30 = 27"
+  },
+  {
+    "id": "perc-006",
+    "topic": "percents",
+    "text": "Знайдіть 40% від 125",
+    "options": [
+      "50",
+      "42",
+      "70",
+      "60"
+    ],
+    "answer": "50",
+    "solution": "125 · 0,40 = 50"
+  },
+  {
+    "id": "perc-007",
+    "topic": "percents",
+    "text": "Знайдіть 5% від 640",
+    "options": [
+      "45",
+      "38",
+      "27",
+      "32"
+    ],
+    "answer": "32",
+    "solution": "640 · 0,05 = 32"
+  },
+  {
+    "id": "perc-008",
+    "topic": "percents",
+    "text": "Знайдіть 50% від 46",
+    "options": [
+      "32",
+      "23",
+      "28",
+      "20"
+    ],
+    "answer": "23",
+    "solution": "46 · 0,50 = 23"
+  },
+  {
+    "id": "perc-009",
+    "topic": "percents",
+    "text": "Знайдіть 12% від 300",
+    "options": [
+      "50",
+      "43",
+      "31",
+      "36"
+    ],
+    "answer": "36",
+    "solution": "300 · 0,12 = 36"
+  },
+  {
+    "id": "perc-010",
+    "topic": "percents",
+    "text": "Знайдіть 75% від 88",
+    "options": [
+      "66",
+      "92",
+      "79",
+      "56"
+    ],
+    "answer": "66",
+    "solution": "88 · 0,75 = 66"
+  },
+  {
+    "id": "perc-011",
+    "topic": "percents",
+    "text": "Знайдіть 8% від 250",
+    "options": [
+      "24",
+      "28",
+      "17",
+      "20"
+    ],
+    "answer": "20",
+    "solution": "250 · 0,08 = 20"
+  },
+  {
+    "id": "perc-012",
+    "topic": "percents",
+    "text": "Знайдіть 60% від 45",
+    "options": [
+      "27",
+      "38",
+      "32",
+      "23"
+    ],
+    "answer": "27",
+    "solution": "45 · 0,60 = 27"
+  },
+  {
+    "id": "perc-013",
+    "topic": "percents",
+    "text": "Знайдіть 35% від 200",
+    "options": [
+      "59",
+      "84",
+      "98",
+      "70"
+    ],
+    "answer": "70",
+    "solution": "200 · 0,35 = 70"
+  },
+  {
+    "id": "perc-014",
+    "topic": "percents",
+    "text": "Знайдіть 45% від 80",
+    "options": [
+      "36",
+      "50",
+      "43",
+      "31"
+    ],
+    "answer": "36",
+    "solution": "80 · 0,45 = 36"
+  },
+  {
+    "id": "perc-015",
+    "topic": "percents",
+    "text": "Знайдіть 90% від 70",
+    "options": [
+      "76",
+      "54",
+      "88",
+      "63"
+    ],
+    "answer": "63",
+    "solution": "70 · 0,90 = 63"
+  },
+  {
+    "id": "prog-001",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 3, d = 4. Знайдіть a7",
+    "options": [
+      "31",
+      "23",
+      "35",
+      "27"
+    ],
+    "answer": "27",
+    "solution": "a7 = 3 + (7 − 1) · 4 = 27"
+  },
+  {
+    "id": "prog-002",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 5, d = 2. Знайдіть a10",
+    "options": [
+      "25",
+      "23",
+      "27",
+      "21"
+    ],
+    "answer": "23",
+    "solution": "a10 = 5 + (10 − 1) · 2 = 23"
+  },
+  {
+    "id": "prog-003",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = -2, d = 6. Знайдіть a5",
+    "options": [
+      "16",
+      "34",
+      "22",
+      "28"
+    ],
+    "answer": "22",
+    "solution": "a5 = -2 + (5 − 1) · 6 = 22"
+  },
+  {
+    "id": "prog-004",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 10, d = -3. Знайдіть a8",
+    "options": [
+      "-11",
+      "-14",
+      "-8",
+      "-17"
+    ],
+    "answer": "-11",
+    "solution": "a8 = 10 + (8 − 1) · -3 = -11"
+  },
+  {
+    "id": "prog-005",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 1, d = 7. Знайдіть a6",
+    "options": [
+      "29",
+      "50",
+      "36",
+      "43"
+    ],
+    "answer": "36",
+    "solution": "a6 = 1 + (6 − 1) · 7 = 36"
+  },
+  {
+    "id": "prog-006",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 8, d = 5. Знайдіть a9",
+    "options": [
+      "48",
+      "53",
+      "43",
+      "58"
+    ],
+    "answer": "48",
+    "solution": "a9 = 8 + (9 − 1) · 5 = 48"
+  },
+  {
+    "id": "prog-007",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 12, d = -4. Знайдіть a6",
+    "options": [
+      "-4",
+      "-8",
+      "-16",
+      "-12"
+    ],
+    "answer": "-8",
+    "solution": "a6 = 12 + (6 − 1) · -4 = -8"
+  },
+  {
+    "id": "prog-008",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 0, d = 9. Знайдіть a5",
+    "options": [
+      "45",
+      "36",
+      "27",
+      "54"
+    ],
+    "answer": "36",
+    "solution": "a5 = 0 + (5 − 1) · 9 = 36"
+  },
+  {
+    "id": "prog-009",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 4, d = 11. Знайдіть a7",
+    "options": [
+      "70",
+      "59",
+      "92",
+      "81"
+    ],
+    "answer": "70",
+    "solution": "a7 = 4 + (7 − 1) · 11 = 70"
+  },
+  {
+    "id": "prog-010",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = -5, d = 3. Знайдіть a12",
+    "options": [
+      "28",
+      "31",
+      "25",
+      "34"
+    ],
+    "answer": "28",
+    "solution": "a12 = -5 + (12 − 1) · 3 = 28"
+  },
+  {
+    "id": "prog-011",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 20, d = -2. Знайдіть a10",
+    "options": [
+      "2",
+      "4",
+      "-2",
+      "0"
+    ],
+    "answer": "2",
+    "solution": "a10 = 20 + (10 − 1) · -2 = 2"
+  },
+  {
+    "id": "prog-012",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 6, d = 6. Знайдіть a8",
+    "options": [
+      "54",
+      "48",
+      "42",
+      "60"
+    ],
+    "answer": "48",
+    "solution": "a8 = 6 + (8 − 1) · 6 = 48"
+  },
+  {
+    "id": "prog-013",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 15, d = 4. Знайдіть a5",
+    "options": [
+      "31",
+      "27",
+      "39",
+      "35"
+    ],
+    "answer": "31",
+    "solution": "a5 = 15 + (5 − 1) · 4 = 31"
+  },
+  {
+    "id": "prog-014",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 2, d = 13. Знайдіть a6",
+    "options": [
+      "54",
+      "80",
+      "67",
+      "93"
+    ],
+    "answer": "67",
+    "solution": "a6 = 2 + (6 − 1) · 13 = 67"
+  },
+  {
+    "id": "prog-015",
+    "topic": "progressions",
+    "text": "Арифметична прогресія: a₁ = 9, d = -1. Знайдіть a11",
+    "options": [
+      "0",
+      "-1",
+      "-3",
+      "-2"
+    ],
+    "answer": "-1",
+    "solution": "a11 = 9 + (11 − 1) · -1 = -1"
+  }
+]

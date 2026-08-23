@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Тест з математики
 
-## Getting Started
+Веб-застосунок для перевірки знань з математики: користувач обирає тему
+та кількість завдань, відповідає на питання з чотирьох варіантів і
+отримує статистику.
 
-First, run the development server:
+**Демо:** https://nmt-math-test-seven.vercel.app/
+
+## Стек
+
+- Next.js (App Router), React
+- JavaScript, звичайний CSS
+- Дані — статичні JSON-файли, без бекенду
+- Деплой — Vercel
+
+## Запуск
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Відкрити http://localhost:3000
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Структура
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  app/page.js          — сторінка, увесь стан тесту (useReducer)
+  components/
+    TopicPicker.jsx    — вибір теми та кількості завдань
+    TaskCard.jsx       — назва теми і текст завдання
+    Options.jsx        — сітка з чотирьох варіантів
+    Timer.jsx          — загальний таймер тесту
+    Stats.jsx          — підсумкова статистика
+  lib/
+    topics.js          — список тем, розрахунок доступної кількості
+    tasks.js           — вибірка завдань за темою
+  data/
+    topics.json        — три теми
+    tasks.json         — 50 завдань
+```
 
-## Learn More
+## Дані
 
-To learn more about Next.js, take a look at the following resources:
+Банк містить 50 завдань за трьома темами: лінійні рівняння (20),
+відсотки (15), арифметична прогресія (15).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Формат завдання:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+{
+  "id": "lin-001",
+  "topic": "linear-equations",
+  "text": "Розв'яжіть рівняння 5x − 12 = 23",
+  "options": ["9", "8", "7", "6"],
+  "answer": "7",
+  "solution": "5x = 35, отже x = 7"
+}
+```
 
-## Deploy on Vercel
+Тексти завдань — простий текст без формульної розмітки. Використовуються
+символи Unicode: `−` (U+2212), `·`, `≤`, `√`, `²`, `³`, `π`. Теми
+підібрані так, щоб коректно відображатися без KaTeX і зображень.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Теми зберігаються окремим файлом, а не виводяться з поля `topic`
+завдань — щоб одруківка в даних не створювала зайву тему в інтерфейсі.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Як працює
+
+Увесь стан тесту — в одному редьюсері з трьома діями: `START`, `ANSWER`,
+`NEXT`. Окремої дії завершення немає: `NEXT` сам визначає кінець списку
+і перемикає статус.
+
+Час на кожне завдання фіксується в момент відповіді й зберігається разом
+з нею — з цих значень рахується середній час у статистиці.
+
+Таймер показує загальний час тесту з розрахунку одна хвилина на завдання.
+Після вичерпання бюджету відлік не зупиняється, а йде в плюс червоним —
+нічого не блокується, це лише орієнтир.
+
+Смужка прогресу складається з сегментів за кількістю завдань: зелений —
+правильна відповідь, червоний — помилка.
+
+Результат можна вивантажити у JSON: підсумок плюс перелік завдань з
+даною відповіддю, правильною відповіддю та часом.
+
+## Обмеження поточної версії
+
+- Показники «Краще ніж 80%» і «Краще ніж 70%» — **заглушки**. Результатів
+  інших користувачів немає, порівнювати немає з чим. Місце під реальну
+  статистику залишено свідомо.
+- Завдання видаються в порядку зберігання, без перемішування.
+- Результати не зберігаються між сесіями — тільки вивантаження у JSON.
+
+## Можливий розвиток
+
+- Перенесення банку завдань у базу (MySQL) з віддачею через API
+- Збереження спроб і реальний розрахунок порівняльної статистики
+- Обмеження часу на завдання з автоматичним переходом
+- Підтримка формул через KaTeX

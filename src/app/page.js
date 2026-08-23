@@ -1,69 +1,140 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { useReducer } from 'react';
+import TopicPicker from '@/components/TopicPicker';
+import TaskCard from '@/components/TaskCard';
+import Options from '@/components/Options';
+import Stats from '@/components/Stats';
+import { getTasks } from '@/lib/tasks';
+import { getTopicTitle } from '@/lib/topics';
+import  Timer from '@/components/Timer';
+
+const initialState = {
+  status: 'idle',
+  tasks: [],
+  index: 0,
+  answers: {},
+  selected: null,
+  startedAt: null,
+  askedAt: null,
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'START':
+      if (action.tasks.length === 0) return state;
+      return {
+        ...initialState,
+        status: 'running',
+        tasks: action.tasks,
+        startedAt: Date.now(),
+        askedAt: Date.now(),
+      };
+
+    case 'ANSWER': {
+      if (state.selected !== null) return state;
+
+      const task = state.tasks[state.index];
+
+      return {
+        ...state,
+        selected: action.value,
+        answers: {
+          ...state.answers,
+          [task.id]: {
+            value: action.value,
+            isCorrect: action.value === task.answer,
+            ms: Date.now() - state.askedAt,
+          },
+        },
+      };
+    }
+
+    case 'NEXT': {
+      const next = state.index + 1;
+
+      if (next >= state.tasks.length) {
+        return { ...state, status: 'finished', selected: null };
+      }
+
+      return { ...state, index: next, selected: null, askedAt: Date.now() };
+    }
+
+    default:
+      return state;
+  }
+}
 
 export default function Home() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const task = state.tasks[state.index] ?? null;
+  const isLast = state.index === state.tasks.length - 1;
+
+  function handleStart(topicId, count) {
+    dispatch({ type: 'START', tasks: getTasks(topicId, count) });
+  }
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main>
+      <div className="picker-row">
+        <TopicPicker
+          onStart={handleStart}
+          isRunning={state.status === 'running'}
         />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        <Timer
+          startedAt={state.startedAt}
+          total={state.tasks.length}
+          frozen={state.status === 'finished'}
+        />
+      </div>
+
+      <div className="progress">
+        {task
+          ? `Завдання ${state.index + 1} з ${state.tasks.length}`
+          : '\u00A0'}
+      </div>
+
+      <div className="progress-bar">
+        {state.tasks.map((t, i) => {
+          const a = state.answers[t.id];
+          let cls = 'segment';
+          if (a) cls += a.isCorrect ? ' ok' : ' bad';
+          else if (i === state.index) cls += ' current';
+          return <div key={t.id} className={cls} />;
+        })}
+      </div>
+
+      <TaskCard
+        topicTitle={task ? getTopicTitle(task.topic) : 'Оберіть тему'}
+        text={task ? task.text : 'Натисніть «Старт», щоб почати тест'}
+      />
+
+      <div className="feedback">{state.selected !== null && task.solution}</div>
+
+      <Options
+        options={task ? task.options : ['', '', '', '']}
+        answer={task ? task.answer : null}
+        selected={state.selected}
+        onSelect={value => dispatch({ type: 'ANSWER', value })}
+      />
+
+      <div className="next">
+        <button
+          onClick={() => dispatch({ type: 'NEXT' })}
+          disabled={state.selected === null || state.status !== 'running'}
+        >
+          {isLast ? 'Завершити' : 'Далі'}
+        </button>
+      </div>
+
+      {state.status === 'finished' && (
+        <Stats
+          answers={state.answers}
+          total={state.tasks.length}
+          tasks={state.tasks}
+        />
+      )}
+    </main>
   );
 }
